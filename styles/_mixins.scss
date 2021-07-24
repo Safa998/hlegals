@@ -1,0 +1,19 @@
+.title {
+  font-style: 12px;
+  line-height: 22px;
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 16px;
+    line-height: 32px;
+  }
+}
+
+@mixin media-breakpoint-up($breakpoint-name) {
+  $breakpoint-value: map-get($grid-breakpoints, $breakpoint-name);
+  @media screen and (min-width: $breakpoint-value) {
+    @content;
+  }
+}
+
